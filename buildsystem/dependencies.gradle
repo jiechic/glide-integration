@@ -1,0 +1,76 @@
+allprojects {
+    repositories {
+        jcenter()
+    }
+}
+
+ext {
+    /**
+     * Tools Version begin
+     */
+    androidBuildToolsVersion = "23.0.3"
+    androidMinSdkVersion = 10
+    androidTargetSdkVersion = 22
+    androidCompileSdkVersion = 23
+
+    /**
+     * Tools Version end
+     */
+
+    /**
+     * Lib begin
+     */
+    //support
+//    supportVersion = "23.4.0"
+
+    supportAppcompatV7 = "com.android.support:appcompat-v7:23.4.0"
+
+    glide = "com.github.bumptech.glide:glide:3.7.0"
+
+    /**
+     * Lib end
+     */
+
+    /**
+     * TestLib begin
+     */
+    dexmakerVersion = "1.0"
+    dexmaker = "com.google.dexmaker:dexmaker:${dexmakerVersion}"
+    dexmakerMockito = "com.google.dexmaker:dexmaker-mockito:${dexmakerVersion}"
+
+    robolectric = "org.robolectric:robolectric:3.0"
+    jUnit = "junit:junit:4.12"
+    assertJ = "org.assertj:assertj-core:1.7.1"
+    mockito = "org.mockito:mockito-core:1.9.5"
+
+    espresso = "com.android.support.test.espresso:espresso-core:2.0"
+    testingSupportLib = "com.android.support.test:testing-support-lib:0.1"
+    /**
+     * TestLib end
+     */
+
+    sampleDependencies = [
+            appcompat: "${supportAppcompatV7}",
+    ]
+
+    sampleTestDependencies = [
+            mockito          : "${mockito}",
+            dexmaker         : "${dexmaker}",
+            dexmakerMockito  : "${dexmakerMockito}",
+            espresso         : "${espresso}",
+            testingSupportLib: "${testingSupportLib}",
+            junit            : "${jUnit}",
+            assertj          : "${assertJ}",
+            robolectric      : "${robolectric}",
+    ]
+
+    qqGroupIconDependencies = [
+            glide    : "${glide}",
+            appcompat: "${supportAppcompatV7}",
+    ]
+
+    qqGroupIconTestDependencies = [
+            junit: "${jUnit}"
+    ]
+
+}
