@@ -21,7 +21,7 @@ android {
 }
 
 dependencies {
-    compile fileTree(dir: 'libs', include: ['*.jar'])
+//    compile fileTree(dir: 'libs', include: ['*.jar'])
 
     def dependencies = rootProject.ext.qqGroupIconDependencies
     def testDependencies = rootProject.ext.qqGroupIconTestDependencies
@@ -30,3 +30,5 @@ dependencies {
     compile dependencies.glide
     testCompile testDependencies.junit
 }
+
+apply from: "$rootDir/buildsystem/gradle-jcenter-push.gradle"

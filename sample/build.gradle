@@ -26,6 +26,7 @@ dependencies {
     def testDependencies = rootProject.ext.sampleTestDependencies
 
     compile project(':qqGroupIcon')
+//    compile 'com.jiechic.library.glide:qqgroupicon-integration:0.1'
 
     compile dependencies.appcompat
 
